@@ -1,7 +1,17 @@
+import { useState } from "react";
+
 const Home = () => {
-  const handleClick = (e) => {
-    console.log("hello, ninjas", e);
-  };
+
+  // let name = 'mario';
+  const [name, setName] = useState('mario');
+  const [age, setAge] = useState(25);
+
+  const handleClick = () => {
+    // name = 'luigi';
+    setName('luigi');
+    setAge(30);
+  }
+
 
   const handleClickAgain = (name, e) => {
     console.log(`Hello ${name}!`, e.target);
@@ -18,4 +28,5 @@ const Home = () => {
   );
 };
 
+ 
 export default Home;
